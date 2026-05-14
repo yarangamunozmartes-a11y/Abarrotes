@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABARROTES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+      
+        <h1>ABARROTES</h1>
+    
+
+    <main id="app-inicio">
+        <p>BIENVENIDO A NUESTRA TIENDA</p>
+        
+        <div class="botones-inicio">
+            <a href="registro.html" class="btn">Registrarse</a>
+            <a href="login.html" class="btn">Iniciar Sesión</a>
+        </div>
+    </main>
+
+    <script src="./scrip.js"></script>
+    <script>
+        // Verificación rápida al cargar el index
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            window.location.href = 'productos.html';
+        }
+    </script>
+</body>
+</html>

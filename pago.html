@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Paga</title>
+    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body >
+   
+<h1>Paga con Yape</h1>
+<img src="qr_yape.jpg" alt="qr Yape" style="width: 250px;">
+<p>Escanea el qr y envía el comprobante por Whatsapp</p>
+
+<button id="btnEnviar">Enviar</button>
+
+<script>
+    document.getElementById('btnEnviar').addEventListener('click', () => {
+        const total = localStorage.getItem('total_compra'); // Debes guardar esto antes
+        const mensaje = `Hola, realicé un pedido de S/${total}. Adjunto mi comprobante de Yape. Mi dirección es: [Escribe aquí tu dirección]`;
+        const numero = "51999888777"; // Tu número de empresa
+        window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
+    });
+</script>
+</body>
+</html>

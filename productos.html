@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PRODUCTOS</title>
+    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body> 
+    <header class="navbar">
+        <header class="tit">Productos</header>
+    <nav>
+        <a href="carrito.html" class="cart-link"> 🛒 <span id="cart-count"></span>
+        </a>
+    </nav>
+</header>
+
+    
+
+<nav class="categorias">
+    <button onclick="filtrarProductos('todos')">Todos</button>
+    <button onclick="filtrarProductos('frutas')">Frutas</button>
+    <button onclick="filtrarProductos('verduras')">Verduras</button>
+</nav>
+
+<div id="lista-productos" class="grid-productos"></div>
+
+<script type="module">
+    import { filtrarProductos } from './productos.js';
+    
+    // Hacemos la función global para que los botones onclick del HTML la reconozcan
+    window.filtrarProductos = filtrarProductos;
+
+    // Carga inicial
+    document.addEventListener('DOMContentLoaded', () => filtrarProductos('todos'));
+</script>
+</body>
+</html>

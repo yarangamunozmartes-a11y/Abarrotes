@@ -1,0 +1,206 @@
+/* --- Paleta de Colores (Verde y Blanco) --- */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #818181;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+
+    
+}
+
+/* --- Navbar (Encabezado) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--verde-principal);
+    padding: 15px 30px;
+    color:var(--verde-oscuro);
+    box-shadow: 0 2px 5px rgba(100, 11, 11, 0.1);
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    color:black
+
+}
+
+#cart-count {
+    color: rgb(0, 0, 0);
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- Botones --- */
+.btn {
+border: none; 
+color: white; 
+padding: 14px 28px; 
+cursor: pointer; 
+border-radius: 5px; 
+display: inline-block;
+margin: 5px;
+background-image: linear-gradient(to right, #9da1a5, #bfc3c7);
+width: 150px;       /* Todos los botones con esta clase medirán 150px */
+padding: 10px;      /* Espacio interno */
+text-align: center; /* Asegura que el texto esté centrado */
+}
+
+
+#btnEnviar {
+    background-color: #25d366; /* Verde WhatsApp */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* --- Contenedores y Productos --- */
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* este pare es de los prodcutos  */
+.card {
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#lista-carrito {
+    background: var(--blanco);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+/* --- Títulos --- */
+header h1, header .tit{
+    text-shadow: 5px 3px 5px rgb(148, 148, 148);
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+    display:flex;
+   justify-content:center;
+
+}
+/* Este código reemplaza el estilo de tu título .tit en style.css */
+.tit {
+font-size: x-large;
+font-family: fantasy;
+font-size: 30px;
+text-align: center;
+font-weight: bold;
+}
+
+/* Contenedor principal del carrito */
+#lista-carrito {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra suave */
+}
+
+/* Fila de cada producto */
+.item-carrito {
+    display: flex;
+    justify-content: space-between; /* Separa nombre y botón */
+    align-items: center; /* Alineación vertical */
+    padding: 15px 0;
+    border-bottom: 1px solid #da7575; /* Línea divisoria sutil */
+}
+
+/* Botón de eliminar con estilo profesional */
+.btn-eliminar {
+    background-color: #883c37;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.btn-eliminar:hover {
+    background-color: #bb4a4a;
+}
+
+#loginForm ,#registroForm{
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+ 
+}
+
+p {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    color: #4b4848;
+    text-align:center;
+    word-spacing: 8px
+}
+h1{
+    text-shadow: 3px 1px 3px rgb(148, 148, 148);
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+
+
+}
+button{
+border: none; 
+color: white; 
+padding: 14px 28px; 
+cursor: pointer; 
+border-radius: 5px; 
+display: inline-block;
+margin: 5px;
+background-image: linear-gradient(to right, #9da1a5, #bfc3c7);
+width: 150px;       /* Todos los botones con esta clase medirán 150px */
+padding: 10px;      /* Espacio interno */
+text-align: center; /* Asegura que el texto esté centrado */
+}
+
+input {
+    box-sizing: border-box;
+    width: 70%;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #ececec;
+    margin-bottom: 30px;
+}
+

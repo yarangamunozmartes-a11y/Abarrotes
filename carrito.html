@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Carrito run run</title>
+    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="navbar">
+    <nav>
+        <a href="productos.html">volver</a>
+        🛒 <span id="cart-count"></span>
+        </a>
+    </nav>
+</header>
+
+    <h1>Carro</h1>
+    <div id="lista-carrito"></div>
+    <h3 id="total">0.00</h3>
+    <button onclick="window.location.href='pago.html'">Paga</button>
+
+<script>
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const lista = document.getElementById('lista-carrito');
+    const totalElem = document.getElementById('total');
+    let total = 0;
+
+    carrito.forEach((p, index) => {
+        lista.innerHTML += `
+            <div class="item-carrito">
+                <span>${p.nombre} - S/${p.precio.toFixed(2)}</span>
+                <button onclick="eliminarProducto(${index})" style="background:red; width: 70px; padding: 5px;  
+                color:black;">Eliminar</button>
+            </div>`;
+        
+        // --- LÍNEA AGREGADA: Suma el precio al total ---
+        total += p.precio; 
+    });
+
+    // --- LÍNEA AGREGADA: Muestra el resultado final en el H3 ---
+    totalElem.innerText = total.toFixed(2);
+
+    window.eliminarProducto = (index) => {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carrito.splice(index, 1);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        location.reload();
+    };
+</script>
+</body>
+</html>
